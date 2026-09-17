@@ -1,0 +1,33 @@
+{
+	"name": "ghostlabs-dynamic-copyright",
+	"version": "1.0.0",
+	"description": "GhostLabs: Dynamic Copyright — a block that keeps a copyright notice current.",
+	"author": "GhostLabs",
+	"license": "GPL-2.0-or-later",
+	"private": true,
+	"scripts": {
+		"build": "wp-scripts build --config webpack.config.cjs",
+		"build:clean": "rm -rf build",
+		"start": "wp-scripts start --config webpack.config.cjs",
+		"format": "wp-scripts format",
+		"lint:js": "wp-scripts lint-js",
+		"lint:css": "wp-scripts lint-style",
+		"test:unit": "vendor/bin/phpunit --testsuite unit",
+		"test:e2e": "playwright test --config=playwright.config.ts",
+		"test:e2e:headed": "playwright test --config=playwright.config.ts --headed",
+		"test:e2e:ui": "playwright test --config=playwright.config.ts --ui",
+		"wp-env:start": "wp-env start",
+		"wp-env:stop": "wp-env stop",
+		"wp-env:destroy": "wp-env destroy",
+		"make-pot": "bash bin/make-pot.sh",
+		"make-json": "bash bin/make-json.sh"
+	},
+	"devDependencies": {
+		"@axe-core/playwright": "^4.12.1",
+		"@babel/parser": "^8.0.5",
+		"@playwright/test": "^1.62.1",
+		"@wordpress/e2e-test-utils-playwright": "^0.16.0",
+		"@wordpress/env": "^11.12.0",
+		"@wordpress/scripts": "^26.13.13"
+	}
+}

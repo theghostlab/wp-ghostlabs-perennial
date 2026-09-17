@@ -1,0 +1,18 @@
+# Postinstall scripts are opt-in under pnpm 10+. None of these need to run for a
+# webpack block build: @parcel/watcher only builds a native binding for
+# `wp-scripts start` file watching (it falls back to polling without it), and the
+# core-js installers only print a funding notice.
+allowBuilds:
+    '@parcel/watcher': false
+    core-js: false
+    core-js-pure: false
+    # wp-env only uses it to chown the container's files on Linux; on macOS the
+    # bind mount already maps ownership, and the prebuilt binding fails to install.
+    fs-ext-extra-prebuilt: false
+
+# wp-scripts 26 pins @typescript-eslint 6, whose ts-api-utils dependency reads
+# TypeScript internals that TypeScript 7 removed — left unpinned, pnpm hoists
+# TS 7 as a transitive peer and `lint:js` dies before it lints a single file.
+# This plugin ships no TypeScript; the pin only feeds the linter's type layer.
+overrides:
+    typescript: '^5.9.0'

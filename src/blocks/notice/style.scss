@@ -1,0 +1,21 @@
+.wp-block-ghostlabs-dynamic-copyright {
+	width: fit-content;
+	max-width: 100%;
+
+	word-spacing: 0.12em;
+
+	&.aligncenter {
+		margin-inline: auto;
+	}
+
+	&.alignright {
+		margin-inline-start: auto;
+	}
+
+	.ghostlabs-dynamic-copyright__year {
+		font-variant-numeric: tabular-nums;
+		letter-spacing: 0.02em;
+
+		white-space: nowrap;
+	}
+}

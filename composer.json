@@ -1,0 +1,36 @@
+{
+	"name": "ghostlabs/dynamic-copyright",
+	"description": "A copyright notice that keeps its year and site name current automatically.",
+	"type": "wordpress-plugin",
+	"license": "GPL-2.0-or-later",
+	"require": {
+		"php": ">=7.4"
+	},
+	"require-dev": {
+		"phpstan/phpstan": "^2.1",
+		"phpunit/phpunit": "^12.0",
+		"szepeviktor/phpstan-wordpress": "^2.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"GHOSTLABS\\DYNAMIC_COPYRIGHT\\": "inc/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"GHOSTLABS\\DYNAMIC_COPYRIGHT\\Tests\\": "tests/php/"
+		}
+	},
+	"config": {
+		"sort-packages": true
+	},
+	"scripts": {
+		"test": "@test:unit",
+		"test:unit": "phpunit --testsuite unit",
+		"analyse": "phpstan analyse -c ../phpstan.neon.dist --memory-limit=1G"
+	},
+	"scripts-descriptions": {
+		"test:unit": "PHPUnit over the pure label logic in inc/",
+		"analyse": "PHPStan level 8 over shared/ and free-only/inc"
+	}
+}
