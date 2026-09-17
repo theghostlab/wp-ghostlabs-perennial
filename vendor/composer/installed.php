@@ -3,7 +3,7 @@
         'name' => 'ghostlabs/dynamic-copyright',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'ca68ed3bc13c15f4d5d4b90c0fc5bd0e42e79bb3',
+        'reference' => '7bd1869b7292b96241b28278b5931f2a8b6181a2',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'ghostlabs/dynamic-copyright' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'ca68ed3bc13c15f4d5d4b90c0fc5bd0e42e79bb3',
+            'reference' => '7bd1869b7292b96241b28278b5931f2a8b6181a2',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

@@ -49,17 +49,70 @@ action; see the FAQ.
 Alignment, color, spacing, font size and line height all come from the standard WordPress block
 controls, so the notice inherits your theme's palette and type scale rather than fighting it.
 
+== External services ==
+
+This plugin contacts no external services. It makes no network requests of any kind — no license
+check, no update check of its own, no analytics, no telemetry, no remote fonts or assets. Nothing
+about your site or your visitors leaves your server because of it.
+
+The one thing that might look like an exception is not one. When the year turns over the plugin
+clears the cache for WP Rocket, W3 Total Cache, WP Super Cache and LiteSpeed Cache — but it does
+that by calling those plugins in PHP on your own site, if they happen to be installed. That is a
+function call inside WordPress, not a request to anybody.
+
+== Source code ==
+
+The editor JavaScript this plugin ships is compiled. The sources it is compiled from are
+published here, tagged to match each release:
+
+https://github.com/theghostlab/wp-ghostlabs-dynamic-copyright
+
+That repository holds the plugin exactly as distributed, plus the `src/` it was built from and
+the lockfile, `package.json` and webpack config needed to rebuild it. A clean install and a
+rebuild reproduce the shipped bundle:
+
+`pnpm install --frozen-lockfile && pnpm run build`
+
+The bundle that ships inside the plugin is minified, which is the whole reason that repository
+exists: the readable source is published there rather than padding every install with it. Nothing
+is obfuscated.
+
+The plugin loads no JavaScript on the front end at all — that bundle is the block editor's, and
+nothing else.
+
 == Installation ==
 
-1. Upload the plugin folder to `/wp-content/plugins/`, or install it through the Plugins screen.
-2. Activate it through the **Plugins** screen.
-3. In any post, page or template, add the **Dynamic Copyright: Notice** block.
+**From your dashboard**
 
-Block themes: add it to your footer template in the Site Editor and every page picks it up.
+1. Go to **Plugins**, then the screen for adding one — **Add Plugins**.
+2. Search for **Dynamic Copyright**.
+3. Click **Install Now**, then **Activate**.
+
+**From a downloaded .zip**
+
+1. Go to **Plugins** and open the **Add Plugins** screen.
+2. Click **Upload Plugin** at the top, choose the .zip file, and click **Install Now**.
+3. Click **Activate Plugin**.
+
+**By FTP**
+
+1. Unzip the file and upload the `ghostlabs-dynamic-copyright` folder to `/wp-content/plugins/`.
+2. Activate the plugin from the **Plugins** screen.
+
+= Then add the notice =
+
+In any post, page or template, add the **Dynamic Copyright: Notice** block.
+
+On a block theme, add it once to your footer template part in **Appearance → Editor** and every
+page that uses that footer carries it. On a classic theme there is no footer template part to add
+it to, so place the block wherever you want the notice.
+
+There is no settings screen. Everything the block does is in its own settings and styles in the
+editor sidebar.
 
 == Frequently Asked Questions ==
 
-= Do I have to do anything on 1 January? =
+= Do I have to do anything on January 1? =
 
 No. The year is worked out each time the page is served.
 
