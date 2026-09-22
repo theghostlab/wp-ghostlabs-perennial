@@ -7,8 +7,8 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
-    'GHOSTLABS\\DYNAMIC_COPYRIGHT\\Kernel' => $baseDir . '/inc/Kernel.php',
-    'GHOSTLABS\\DYNAMIC_COPYRIGHT\\Service\\CopyrightBlock' => $baseDir . '/inc/Service/CopyrightBlock.php',
-    'GHOSTLABS\\DYNAMIC_COPYRIGHT\\Service\\YearRollover' => $baseDir . '/inc/Service/YearRollover.php',
-    'GHOSTLABS\\DYNAMIC_COPYRIGHT\\Traits\\Singleton' => $baseDir . '/inc/Traits/Singleton.php',
+    'GHOSTLABS\\PERENNIAL\\Kernel' => $baseDir . '/inc/Kernel.php',
+    'GHOSTLABS\\PERENNIAL\\Service\\CopyrightBlock' => $baseDir . '/inc/Service/CopyrightBlock.php',
+    'GHOSTLABS\\PERENNIAL\\Service\\YearRollover' => $baseDir . '/inc/Service/YearRollover.php',
+    'GHOSTLABS\\PERENNIAL\\Traits\\Singleton' => $baseDir . '/inc/Traits/Singleton.php',
 );

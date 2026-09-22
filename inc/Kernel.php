@@ -1,11 +1,11 @@
 <?php
 
 
-namespace GHOSTLABS\DYNAMIC_COPYRIGHT;
+namespace GHOSTLABS\PERENNIAL;
 
-use GHOSTLABS\DYNAMIC_COPYRIGHT\Service\CopyrightBlock;
-use GHOSTLABS\DYNAMIC_COPYRIGHT\Service\YearRollover;
-use GHOSTLABS\DYNAMIC_COPYRIGHT\Traits\Singleton;
+use GHOSTLABS\PERENNIAL\Service\CopyrightBlock;
+use GHOSTLABS\PERENNIAL\Service\YearRollover;
+use GHOSTLABS\PERENNIAL\Traits\Singleton;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;

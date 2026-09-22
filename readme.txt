@@ -1,4 +1,4 @@
-=== Dynamic Copyright – Auto-Updating Copyright Year Block ===
+=== Perennial – Auto-Updating Copyright Year Block ===
 Contributors: ghostlabs
 Tags: copyright, copyright year, current year, footer, year
 Requires at least: 6.4
@@ -65,7 +65,7 @@ function call inside WordPress, not a request to anybody.
 The editor JavaScript this plugin ships is compiled. The sources it is compiled from are
 published here, tagged to match each release:
 
-https://github.com/theghostlab/wp-ghostlabs-dynamic-copyright
+https://github.com/theghostlab/wp-ghostlabs-perennial
 
 That repository holds the plugin exactly as distributed, plus the `src/` it was built from and
 the lockfile, `package.json` and webpack config needed to rebuild it. A clean install and a
@@ -85,7 +85,7 @@ nothing else.
 **From your dashboard**
 
 1. Go to **Plugins**, then the screen for adding one — **Add Plugins**.
-2. Search for **Dynamic Copyright**.
+2. Search for **Perennial**.
 3. Click **Install Now**, then **Activate**.
 
 **From a downloaded .zip**
@@ -96,12 +96,12 @@ nothing else.
 
 **By FTP**
 
-1. Unzip the file and upload the `ghostlabs-dynamic-copyright` folder to `/wp-content/plugins/`.
+1. Unzip the file and upload the `ghostlabs-perennial` folder to `/wp-content/plugins/`.
 2. Activate the plugin from the **Plugins** screen.
 
 = Then add the notice =
 
-In any post, page or template, add the **Dynamic Copyright: Notice** block.
+In any post, page, or template, add the **Perennial: Copyright Notice** block.
 
 On a block theme, add it once to your footer template part in **Appearance → Editor** and every
 page that uses that footer carries it. On a classic theme there is no footer template part to add
@@ -144,15 +144,15 @@ schedule.
 Yes — two hooks, both reached on that same first request of the new year. Neither fires on a
 brand-new install, which has no previous year on record to compare against.
 
-The `ghostlabs_dynamic_copyright_year_rolled_over` action is passed the new year and the year
+The `ghostlabs_perennial_year_rolled_over` action is passed the new year and the year
 before it. It fires whether or not this plugin clears anything, so it is the place to purge a
 cache, CDN or host layer this plugin does not know about.
 
-`add_action( 'ghostlabs_dynamic_copyright_year_rolled_over', function ( $current, $stored ) {
+`add_action( 'ghostlabs_perennial_year_rolled_over', function ( $current, $stored ) {
     // Clear your own cache here.
 }, 10, 2 );`
 
-The `ghostlabs_dynamic_copyright_purge_on_rollover` filter defaults to `true`. Return `false`
+The `ghostlabs_perennial_purge_on_rollover` filter defaults to `true`. Return `false`
 and the plugin clears nothing itself. The action above still fires, so you can decline the
 built-in purge and still handle it your own way.
 
@@ -198,9 +198,9 @@ whatever units your theme does.
   and LiteSpeed Cache. The check runs on the first request of the new year that WordPress
   handles itself rather than serving from cache — a page view, an admin screen, a REST call or
   a crawler. There is no scheduled task.
-* Added an action, `ghostlabs_dynamic_copyright_year_rolled_over`, passed the new and previous
+* Added an action, `ghostlabs_perennial_year_rolled_over`, passed the new and previous
   year, so any other cache, CDN or host layer can clear itself.
-* Added a filter, `ghostlabs_dynamic_copyright_purge_on_rollover` (default true), to turn the
+* Added a filter, `ghostlabs_perennial_purge_on_rollover` (default true), to turn the
   plugin's own purging off. The action fires either way.
 * The year range uses an en dash — © 2001 – 2026 — which is the correct punctuation for a
   range, and the year format is translatable.

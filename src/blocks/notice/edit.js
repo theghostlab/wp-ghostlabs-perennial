@@ -22,27 +22,27 @@ import { store as coreStore } from '@wordpress/core-data';
 
 import './editor.scss';
 
-const CSS_BASE = 'ghostlabs-dynamic-copyright';
+const CSS_BASE = 'ghostlabs-perennial';
 const YEAR_LENGTH = 4;
 
 const FONT_SIZE_UNITS = [ 'rem', 'em', 'ch', '%' ];
 
 const FONT_WEIGHTS = [
-	{ label: __( 'Default', 'ghostlabs-dynamic-copyright' ), value: '' },
-	{ label: __( 'Light (300)', 'ghostlabs-dynamic-copyright' ), value: '300' },
+	{ label: __( 'Default', 'ghostlabs-perennial' ), value: '' },
+	{ label: __( 'Light (300)', 'ghostlabs-perennial' ), value: '300' },
 	{
-		label: __( 'Regular (400)', 'ghostlabs-dynamic-copyright' ),
+		label: __( 'Regular (400)', 'ghostlabs-perennial' ),
 		value: '400',
 	},
 	{
-		label: __( 'Medium (500)', 'ghostlabs-dynamic-copyright' ),
+		label: __( 'Medium (500)', 'ghostlabs-perennial' ),
 		value: '500',
 	},
 	{
-		label: __( 'Semi-bold (600)', 'ghostlabs-dynamic-copyright' ),
+		label: __( 'Semi-bold (600)', 'ghostlabs-perennial' ),
 		value: '600',
 	},
-	{ label: __( 'Bold (700)', 'ghostlabs-dynamic-copyright' ), value: '700' },
+	{ label: __( 'Bold (700)', 'ghostlabs-perennial' ), value: '700' },
 ];
 
 const sanitiseYear = ( value ) =>
@@ -57,14 +57,14 @@ const yearLabel = ( from ) => {
 				_x(
 					'© %1$s – %2$s',
 					'copyright year range',
-					'ghostlabs-dynamic-copyright'
+					'ghostlabs-perennial'
 				),
 				from,
 				currentYear
 		  )
 		: sprintf(
 				/* translators: %s: the current year. */
-				_x( '© %s', 'copyright year', 'ghostlabs-dynamic-copyright' ),
+				_x( '© %s', 'copyright year', 'ghostlabs-perennial' ),
 				currentYear
 		  );
 };
@@ -98,8 +98,7 @@ function Edit( {
 
 	const blockProps = useBlockProps();
 
-	const placeholder =
-		siteTitle || __( 'Add a name', 'ghostlabs-dynamic-copyright' );
+	const placeholder = siteTitle || __( 'Add a name', 'ghostlabs-perennial' );
 
 	const yearClassName = [
 		`${ CSS_BASE }__year`,
@@ -119,18 +118,13 @@ function Edit( {
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody
-					title={ __( 'Settings', 'ghostlabs-dynamic-copyright' ) }
-				>
+				<PanelBody title={ __( 'Settings', 'ghostlabs-perennial' ) }>
 					<TextControl
 						__nextHasNoMarginBottom
-						label={ __(
-							'From year',
-							'ghostlabs-dynamic-copyright'
-						) }
+						label={ __( 'From year', 'ghostlabs-perennial' ) }
 						help={ __(
 							'Optional. Shows a range, for example 2001 – 2026.',
-							'ghostlabs-dynamic-copyright'
+							'ghostlabs-perennial'
 						) }
 						value={ from }
 						inputMode="numeric"
@@ -142,11 +136,11 @@ function Edit( {
 						__nextHasNoMarginBottom
 						label={ __(
 							'Statement of rights',
-							'ghostlabs-dynamic-copyright'
+							'ghostlabs-perennial'
 						) }
 						help={ __(
 							'Appends "All rights reserved."',
-							'ghostlabs-dynamic-copyright'
+							'ghostlabs-perennial'
 						) }
 						checked={ statementOfRights }
 						onChange={ ( value ) =>
@@ -158,10 +152,7 @@ function Edit( {
 
 			<InspectorControls group="styles">
 				<PanelBody
-					title={ __(
-						'Year typography',
-						'ghostlabs-dynamic-copyright'
-					) }
+					title={ __( 'Year typography', 'ghostlabs-perennial' ) }
 				>
 					<FontSizePicker
 						__nextHasNoMarginBottom
@@ -171,7 +162,7 @@ function Edit( {
 					/>
 					<SelectControl
 						__nextHasNoMarginBottom
-						label={ __( 'Weight', 'ghostlabs-dynamic-copyright' ) }
+						label={ __( 'Weight', 'ghostlabs-perennial' ) }
 						value={ yearFontWeight ?? '' }
 						options={ FONT_WEIGHTS }
 						onChange={ ( value ) =>
@@ -183,15 +174,12 @@ function Edit( {
 				</PanelBody>
 
 				<PanelColorSettings
-					title={ __( 'Year color', 'ghostlabs-dynamic-copyright' ) }
+					title={ __( 'Year color', 'ghostlabs-perennial' ) }
 					colorSettings={ [
 						{
 							value: yearColor.color,
 							onChange: setYearColor,
-							label: __(
-								'Year text',
-								'ghostlabs-dynamic-copyright'
-							),
+							label: __( 'Year text', 'ghostlabs-perennial' ),
 						},
 					] }
 				>
@@ -228,7 +216,7 @@ function Edit( {
 						<span className={ `${ CSS_BASE }__rights` }>
 							{ __(
 								'All rights reserved.',
-								'ghostlabs-dynamic-copyright'
+								'ghostlabs-perennial'
 							) }
 						</span>
 					</>

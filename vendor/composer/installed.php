@@ -1,19 +1,19 @@
 <?php return array(
     'root' => array(
-        'name' => 'ghostlabs/dynamic-copyright',
+        'name' => 'ghostlabs/perennial',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '7bd1869b7292b96241b28278b5931f2a8b6181a2',
+        'reference' => 'f37665d47476ecc2406bf6f53c3e5d12e7ee6cef',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => false,
     ),
     'versions' => array(
-        'ghostlabs/dynamic-copyright' => array(
+        'ghostlabs/perennial' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '7bd1869b7292b96241b28278b5931f2a8b6181a2',
+            'reference' => 'f37665d47476ecc2406bf6f53c3e5d12e7ee6cef',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

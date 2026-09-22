@@ -1,9 +1,9 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "ghostlabs/dynamic-copyright",
+	"name": "ghostlabs/perennial",
 	"version": "1.0.0",
-	"title": "Dynamic Copyright: Notice",
+	"title": "Perennial: Copyright Notice",
 	"category": "widgets",
 	"icon": "editor-paragraph",
 	"description": "A copyright notice that keeps its year and site name current automatically.",
@@ -55,7 +55,7 @@
 			"lineHeight": true
 		}
 	},
-	"textdomain": "ghostlabs-dynamic-copyright",
+	"textdomain": "ghostlabs-perennial",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css"

@@ -2,50 +2,50 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: GhostLabs: Dynamic Copyright 1.0.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ghostlabs-dynamic-copyright\n"
+"Project-Id-Version: Perennial 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ghostlabs-perennial\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-17T08:54:38+00:00\n"
+"POT-Creation-Date: 2026-09-20T09:11:12+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
-"X-Domain: ghostlabs-dynamic-copyright\n"
+"X-Domain: ghostlabs-perennial\n"
 
 #. Plugin Name of the plugin
-#: ghostlabs-dynamic-copyright.php
-msgid "GhostLabs: Dynamic Copyright"
+#: ghostlabs-perennial.php
+msgid "Perennial"
 msgstr ""
 
 #. Plugin URI of the plugin
-#: ghostlabs-dynamic-copyright.php
-msgid "https://theghostlab.io/docs/dynamic-copyright"
+#: ghostlabs-perennial.php
+msgid "https://theghostlab.io/docs/perennial"
 msgstr ""
 
 #. Description of the plugin
-#: ghostlabs-dynamic-copyright.php
+#: ghostlabs-perennial.php
 msgid "Keeps your copyright notice current by dynamically updating the year and site name."
 msgstr ""
 
 #. Author of the plugin
-#: ghostlabs-dynamic-copyright.php
+#: ghostlabs-perennial.php
 msgid "GhostLabs"
 msgstr ""
 
 #. Author URI of the plugin
-#: ghostlabs-dynamic-copyright.php
+#: ghostlabs-perennial.php
 msgid "https://theghostlab.io"
 msgstr ""
 
-#: inc/Service/CopyrightBlock.php:99
-#: src/blocks/notice/edit.js:280
+#: inc/Service/CopyrightBlock.php:132
+#: src/blocks/notice/edit.js:268
 msgid "All rights reserved."
 msgstr ""
 
 #. translators: 1: start year, 2: current year. The separator is an en dash (U+2013), the convention for ranges — change it if your language spaces or punctuates ranges differently.
-#: inc/Service/CopyrightBlock.php:227
+#: inc/Service/CopyrightBlock.php:280
 #: src/blocks/notice/edit.js:88
 #, php-format,js-format
 msgctxt "copyright year range"
@@ -53,7 +53,7 @@ msgid "© %1$s – %2$s"
 msgstr ""
 
 #. translators: %s: the current year.
-#: inc/Service/CopyrightBlock.php:235
+#: inc/Service/CopyrightBlock.php:288
 #: src/blocks/notice/edit.js:98
 #, php-format,js-format
 msgctxt "copyright year"
@@ -92,49 +92,49 @@ msgstr ""
 msgid "Bold (700)"
 msgstr ""
 
-#: src/blocks/notice/edit.js:149
+#: src/blocks/notice/edit.js:148
 msgid "Add a name"
 msgstr ""
 
-#: src/blocks/notice/edit.js:172
+#: src/blocks/notice/edit.js:170
 msgid "Settings"
 msgstr ""
 
-#: src/blocks/notice/edit.js:176
+#: src/blocks/notice/edit.js:173
 msgid "From year"
 msgstr ""
 
-#: src/blocks/notice/edit.js:180
+#: src/blocks/notice/edit.js:174
 msgid "Optional. Shows a range, for example 2001 – 2026."
 msgstr ""
 
-#: src/blocks/notice/edit.js:192
+#: src/blocks/notice/edit.js:186
 msgid "Statement of rights"
 msgstr ""
 
-#: src/blocks/notice/edit.js:196
+#: src/blocks/notice/edit.js:190
 msgid "Appends \"All rights reserved.\""
 msgstr ""
 
-#: src/blocks/notice/edit.js:210
+#: src/blocks/notice/edit.js:204
 msgid "Year typography"
 msgstr ""
 
-#: src/blocks/notice/edit.js:223
+#: src/blocks/notice/edit.js:214
 msgid "Weight"
 msgstr ""
 
-#: src/blocks/notice/edit.js:235
+#: src/blocks/notice/edit.js:226
 msgid "Year color"
 msgstr ""
 
-#: src/blocks/notice/edit.js:240
+#: src/blocks/notice/edit.js:231
 msgid "Year text"
 msgstr ""
 
 #: src/blocks/notice/block.json
 msgctxt "block title"
-msgid "Dynamic Copyright: Notice"
+msgid "Copyright Notice"
 msgstr ""
 
 #: src/blocks/notice/block.json

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace GHOSTLABS\DYNAMIC_COPYRIGHT\Traits;
+namespace GHOSTLABS\PERENNIAL\Traits;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -16,7 +16,7 @@ trait Singleton {
 	final public function __clone() {
 		_doing_it_wrong(
 			__FUNCTION__,
-			esc_html__( 'Cloning this class is not allowed.', 'ghostlabs-dynamic-copyright' ),
+			esc_html__( 'Cloning this class is not allowed.', 'ghostlabs-perennial' ),
 			'1.0.0'
 		);
 	}
@@ -24,7 +24,7 @@ trait Singleton {
 	final public function __wakeup() {
 		_doing_it_wrong(
 			__FUNCTION__,
-			esc_html__( 'Unserializing this class is not allowed.', 'ghostlabs-dynamic-copyright' ),
+			esc_html__( 'Unserializing this class is not allowed.', 'ghostlabs-perennial' ),
 			'1.0.0'
 		);
 	}

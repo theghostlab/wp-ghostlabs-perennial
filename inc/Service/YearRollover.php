@@ -1,7 +1,7 @@
 <?php
 
 
-namespace GHOSTLABS\DYNAMIC_COPYRIGHT\Service;
+namespace GHOSTLABS\PERENNIAL\Service;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 final class YearRollover {
 
-	private const OPTION = 'ghostlabs_dynamic-copyright_year';
+	private const OPTION = 'ghostlabs_perennial_year';
 
 	public function register(): void {
 		add_action( 'wp_loaded', [ $this, 'maybePurge' ] );
@@ -33,9 +33,9 @@ final class YearRollover {
 			return;
 		}
 
-		do_action( 'ghostlabs_dynamic_copyright_year_rolled_over', $current, $stored );
+		do_action( 'ghostlabs_perennial_year_rolled_over', $current, $stored );
 
-		if ( ! apply_filters( 'ghostlabs_dynamic_copyright_purge_on_rollover', true ) ) {
+		if ( ! apply_filters( 'ghostlabs_perennial_purge_on_rollover', true ) ) {
 			return;
 		}
 

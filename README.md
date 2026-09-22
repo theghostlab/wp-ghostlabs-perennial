@@ -1,4 +1,4 @@
-# GhostLabs: Dynamic Copyright
+# Perennial
 
 A WordPress block that keeps a copyright notice current — the year is worked out when the page
 is served, so it can never go stale and it is never written into your post content.
@@ -30,7 +30,7 @@ claim, because this is exactly what a reviewer checks.
 
 | | |
 |---|---|
-| `ghostlabs-dynamic-copyright.php`, `inc/`, `shared/` | the plugin as it ships |
+| `ghostlabs-perennial.php`, `inc/`, `shared/` | the plugin as it ships |
 | `build/` | the compiled block assets, as they ship |
 | `src/` | the sources `build/` is compiled from |
 | `package.json`, `pnpm-lock.yaml`, `webpack.config.cjs` | everything needed to reproduce that compile |

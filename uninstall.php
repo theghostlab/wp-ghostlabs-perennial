@@ -5,21 +5,21 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	exit;
 }
 
-$ghostlabs_dynamic_copyright_option = 'ghostlabs_dynamic-copyright_year';
+$ghostlabs_perennial_option = 'ghostlabs_perennial_year';
 
-delete_option( $ghostlabs_dynamic_copyright_option );
+delete_option( $ghostlabs_perennial_option );
 
 if ( is_multisite() ) {
-	$ghostlabs_dynamic_copyright_sites = get_sites(
+	$ghostlabs_perennial_sites = get_sites(
 		[
 			'fields' => 'ids',
 			'number' => 0,
 		]
 	);
 
-	foreach ( $ghostlabs_dynamic_copyright_sites as $ghostlabs_dynamic_copyright_site_id ) {
-		switch_to_blog( (int) $ghostlabs_dynamic_copyright_site_id );
-		delete_option( $ghostlabs_dynamic_copyright_option );
+	foreach ( $ghostlabs_perennial_sites as $ghostlabs_perennial_site_id ) {
+		switch_to_blog( (int) $ghostlabs_perennial_site_id );
+		delete_option( $ghostlabs_perennial_option );
 		restore_current_blog();
 	}
 }

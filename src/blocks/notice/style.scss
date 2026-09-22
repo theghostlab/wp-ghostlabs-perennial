@@ -1,4 +1,4 @@
-.wp-block-ghostlabs-dynamic-copyright {
+.wp-block-ghostlabs-perennial {
 	width: fit-content;
 	max-width: 100%;
 
@@ -12,10 +12,14 @@
 		margin-inline-start: auto;
 	}
 
-	.ghostlabs-dynamic-copyright__year {
+	.ghostlabs-perennial__year {
 		font-variant-numeric: tabular-nums;
 		letter-spacing: 0.02em;
 
 		white-space: nowrap;
+
+		@media (max-width: 30rem) {
+			white-space: normal;
+		}
 	}
 }

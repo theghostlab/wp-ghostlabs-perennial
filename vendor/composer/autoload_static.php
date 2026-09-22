@@ -4,17 +4,17 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit835177370c8073d4690950ef052c6672
+class ComposerStaticInit25695267dda4c551e97263a977f49b70
 {
     public static $prefixLengthsPsr4 = array (
         'G' =>
         array (
-            'GHOSTLABS\\DYNAMIC_COPYRIGHT\\' => 28,
+            'GHOSTLABS\\PERENNIAL\\' => 20,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'GHOSTLABS\\DYNAMIC_COPYRIGHT\\' =>
+        'GHOSTLABS\\PERENNIAL\\' =>
         array (
             0 => __DIR__ . '/../..' . '/inc',
         ),
@@ -22,18 +22,18 @@ class ComposerStaticInit835177370c8073d4690950ef052c6672
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'GHOSTLABS\\DYNAMIC_COPYRIGHT\\Kernel' => __DIR__ . '/../..' . '/inc/Kernel.php',
-        'GHOSTLABS\\DYNAMIC_COPYRIGHT\\Service\\CopyrightBlock' => __DIR__ . '/../..' . '/inc/Service/CopyrightBlock.php',
-        'GHOSTLABS\\DYNAMIC_COPYRIGHT\\Service\\YearRollover' => __DIR__ . '/../..' . '/inc/Service/YearRollover.php',
-        'GHOSTLABS\\DYNAMIC_COPYRIGHT\\Traits\\Singleton' => __DIR__ . '/../..' . '/inc/Traits/Singleton.php',
+        'GHOSTLABS\\PERENNIAL\\Kernel' => __DIR__ . '/../..' . '/inc/Kernel.php',
+        'GHOSTLABS\\PERENNIAL\\Service\\CopyrightBlock' => __DIR__ . '/../..' . '/inc/Service/CopyrightBlock.php',
+        'GHOSTLABS\\PERENNIAL\\Service\\YearRollover' => __DIR__ . '/../..' . '/inc/Service/YearRollover.php',
+        'GHOSTLABS\\PERENNIAL\\Traits\\Singleton' => __DIR__ . '/../..' . '/inc/Traits/Singleton.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit835177370c8073d4690950ef052c6672::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit835177370c8073d4690950ef052c6672::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit835177370c8073d4690950ef052c6672::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit25695267dda4c551e97263a977f49b70::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit25695267dda4c551e97263a977f49b70::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit25695267dda4c551e97263a977f49b70::$classMap;
 
         }, null, ClassLoader::class);
     }

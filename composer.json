@@ -1,5 +1,5 @@
 {
-	"name": "ghostlabs/dynamic-copyright",
+	"name": "ghostlabs/perennial",
 	"description": "A copyright notice that keeps its year and site name current automatically.",
 	"type": "wordpress-plugin",
 	"license": "GPL-2.0-or-later",
@@ -13,12 +13,12 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"GHOSTLABS\\DYNAMIC_COPYRIGHT\\": "inc/"
+			"GHOSTLABS\\PERENNIAL\\": "inc/"
 		}
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"GHOSTLABS\\DYNAMIC_COPYRIGHT\\Tests\\": "tests/php/"
+			"GHOSTLABS\\PERENNIAL\\Tests\\": "tests/php/"
 		}
 	},
 	"config": {

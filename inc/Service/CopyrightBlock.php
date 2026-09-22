@@ -1,7 +1,7 @@
 <?php
 
 
-namespace GHOSTLABS\DYNAMIC_COPYRIGHT\Service;
+namespace GHOSTLABS\PERENNIAL\Service;
 
 use WP_Block;
 use WP_Block_Type;
@@ -12,11 +12,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 final class CopyrightBlock {
 
-	private const CSS_BASE = 'ghostlabs-dynamic-copyright';
+	private const CSS_BASE = 'ghostlabs-perennial';
+
+	private const ALLOWED_OWNER_HTML = [
+		'a'      => [
+			'href'   => true,
+			'title'  => true,
+			'rel'    => true,
+			'target' => true,
+		],
+		'strong' => [],
+		'em'     => [],
+		'b'      => [],
+		'i'      => [],
+		'br'     => [],
+		'span'   => [],
+	];
 
 	public function register(): void {
 		$block_type = register_block_type(
-			GHOSTLABS_DYNAMIC_COPYRIGHT_PLUGIN_PATH . 'build/blocks/notice',
+			GHOSTLABS_PERENNIAL_PLUGIN_PATH . 'build/blocks/notice',
 			[ 'render_callback' => [ $this, 'render' ] ]
 		);
 
@@ -29,8 +44,8 @@ final class CopyrightBlock {
 		foreach ( $block_type->editor_script_handles as $handle ) {
 			wp_set_script_translations(
 				$handle,
-				'ghostlabs-dynamic-copyright',
-				GHOSTLABS_DYNAMIC_COPYRIGHT_PLUGIN_PATH . 'languages'
+				'ghostlabs-perennial',
+				GHOSTLABS_PERENNIAL_PLUGIN_PATH . 'languages'
 			);
 		}
 	}
@@ -55,7 +70,7 @@ final class CopyrightBlock {
 			sprintf(
 				'<span class="%s__owner">%s</span>',
 				esc_attr( self::CSS_BASE ),
-				wp_kses_post( self::ownerLabel( $owner, $statement_of_rights ) )
+				wp_kses( self::ownerLabel( $owner, $statement_of_rights ), self::ALLOWED_OWNER_HTML )
 			),
 		];
 
@@ -63,7 +78,7 @@ final class CopyrightBlock {
 			$parts[] = sprintf(
 				'<span class="%s__rights">%s</span>',
 				esc_attr( self::CSS_BASE ),
-				esc_html__( 'All rights reserved.', 'ghostlabs-dynamic-copyright' )
+				esc_html__( 'All rights reserved.', 'ghostlabs-perennial' )
 			);
 		}
 
@@ -129,7 +144,7 @@ final class CopyrightBlock {
 		if ( '' !== $from && $from !== $currentYear ) {
 			return sprintf(
 				/* translators: 1: start year, 2: current year. The separator is an en dash (U+2013), the convention for ranges — change it if your language spaces or punctuates ranges differently. */
-				_x( '© %1$s – %2$s', 'copyright year range', 'ghostlabs-dynamic-copyright' ),
+				_x( '© %1$s – %2$s', 'copyright year range', 'ghostlabs-perennial' ),
 				$from,
 				$currentYear
 			);
@@ -137,7 +152,7 @@ final class CopyrightBlock {
 
 		return sprintf(
 			/* translators: %s: the current year. */
-			_x( '© %s', 'copyright year', 'ghostlabs-dynamic-copyright' ),
+			_x( '© %s', 'copyright year', 'ghostlabs-perennial' ),
 			$currentYear
 		);
 	}

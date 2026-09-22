@@ -1,7 +1,7 @@
 {
-	"name": "ghostlabs-dynamic-copyright",
+	"name": "ghostlabs-perennial",
 	"version": "1.0.0",
-	"description": "GhostLabs: Dynamic Copyright — a block that keeps a copyright notice current.",
+	"description": "Perennial — a block that keeps a copyright notice current.",
 	"author": "GhostLabs",
 	"license": "GPL-2.0-or-later",
 	"private": true,
