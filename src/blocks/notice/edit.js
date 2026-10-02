@@ -28,21 +28,21 @@ const YEAR_LENGTH = 4;
 const FONT_SIZE_UNITS = [ 'rem', 'em', 'ch', '%' ];
 
 const FONT_WEIGHTS = [
-	{ label: __( 'Default', 'ghostlabs-perennial' ), value: '' },
-	{ label: __( 'Light (300)', 'ghostlabs-perennial' ), value: '300' },
+	{ label: __( 'Default', 'ghostlabs-dynamic-copyright-notice' ), value: '' },
+	{ label: __( 'Light (300)', 'ghostlabs-dynamic-copyright-notice' ), value: '300' },
 	{
-		label: __( 'Regular (400)', 'ghostlabs-perennial' ),
+		label: __( 'Regular (400)', 'ghostlabs-dynamic-copyright-notice' ),
 		value: '400',
 	},
 	{
-		label: __( 'Medium (500)', 'ghostlabs-perennial' ),
+		label: __( 'Medium (500)', 'ghostlabs-dynamic-copyright-notice' ),
 		value: '500',
 	},
 	{
-		label: __( 'Semi-bold (600)', 'ghostlabs-perennial' ),
+		label: __( 'Semi-bold (600)', 'ghostlabs-dynamic-copyright-notice' ),
 		value: '600',
 	},
-	{ label: __( 'Bold (700)', 'ghostlabs-perennial' ), value: '700' },
+	{ label: __( 'Bold (700)', 'ghostlabs-dynamic-copyright-notice' ), value: '700' },
 ];
 
 const sanitiseYear = ( value ) =>
@@ -57,14 +57,14 @@ const yearLabel = ( from ) => {
 				_x(
 					'© %1$s – %2$s',
 					'copyright year range',
-					'ghostlabs-perennial'
+					'ghostlabs-dynamic-copyright-notice'
 				),
 				from,
 				currentYear
 		  )
 		: sprintf(
 				/* translators: %s: the current year. */
-				_x( '© %s', 'copyright year', 'ghostlabs-perennial' ),
+				_x( '© %s', 'copyright year', 'ghostlabs-dynamic-copyright-notice' ),
 				currentYear
 		  );
 };
@@ -98,7 +98,7 @@ function Edit( {
 
 	const blockProps = useBlockProps();
 
-	const placeholder = siteTitle || __( 'Add a name', 'ghostlabs-perennial' );
+	const placeholder = siteTitle || __( 'Add a name', 'ghostlabs-dynamic-copyright-notice' );
 
 	const yearClassName = [
 		`${ CSS_BASE }__year`,
@@ -118,13 +118,13 @@ function Edit( {
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={ __( 'Settings', 'ghostlabs-perennial' ) }>
+				<PanelBody title={ __( 'Settings', 'ghostlabs-dynamic-copyright-notice' ) }>
 					<TextControl
 						__nextHasNoMarginBottom
-						label={ __( 'From year', 'ghostlabs-perennial' ) }
+						label={ __( 'From year', 'ghostlabs-dynamic-copyright-notice' ) }
 						help={ __(
 							'Optional. Shows a range, for example 2001 – 2026.',
-							'ghostlabs-perennial'
+							'ghostlabs-dynamic-copyright-notice'
 						) }
 						value={ from }
 						inputMode="numeric"
@@ -136,11 +136,11 @@ function Edit( {
 						__nextHasNoMarginBottom
 						label={ __(
 							'Statement of rights',
-							'ghostlabs-perennial'
+							'ghostlabs-dynamic-copyright-notice'
 						) }
 						help={ __(
 							'Appends "All rights reserved."',
-							'ghostlabs-perennial'
+							'ghostlabs-dynamic-copyright-notice'
 						) }
 						checked={ statementOfRights }
 						onChange={ ( value ) =>
@@ -152,7 +152,7 @@ function Edit( {
 
 			<InspectorControls group="styles">
 				<PanelBody
-					title={ __( 'Year typography', 'ghostlabs-perennial' ) }
+					title={ __( 'Year typography', 'ghostlabs-dynamic-copyright-notice' ) }
 				>
 					<FontSizePicker
 						__nextHasNoMarginBottom
@@ -162,7 +162,7 @@ function Edit( {
 					/>
 					<SelectControl
 						__nextHasNoMarginBottom
-						label={ __( 'Weight', 'ghostlabs-perennial' ) }
+						label={ __( 'Weight', 'ghostlabs-dynamic-copyright-notice' ) }
 						value={ yearFontWeight ?? '' }
 						options={ FONT_WEIGHTS }
 						onChange={ ( value ) =>
@@ -174,12 +174,12 @@ function Edit( {
 				</PanelBody>
 
 				<PanelColorSettings
-					title={ __( 'Year color', 'ghostlabs-perennial' ) }
+					title={ __( 'Year color', 'ghostlabs-dynamic-copyright-notice' ) }
 					colorSettings={ [
 						{
 							value: yearColor.color,
 							onChange: setYearColor,
-							label: __( 'Year text', 'ghostlabs-perennial' ),
+							label: __( 'Year text', 'ghostlabs-dynamic-copyright-notice' ),
 						},
 					] }
 				>
@@ -216,7 +216,7 @@ function Edit( {
 						<span className={ `${ CSS_BASE }__rights` }>
 							{ __(
 								'All rights reserved.',
-								'ghostlabs-perennial'
+								'ghostlabs-dynamic-copyright-notice'
 							) }
 						</span>
 					</>

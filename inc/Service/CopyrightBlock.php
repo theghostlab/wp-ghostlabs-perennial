@@ -44,7 +44,7 @@ final class CopyrightBlock {
 		foreach ( $block_type->editor_script_handles as $handle ) {
 			wp_set_script_translations(
 				$handle,
-				'ghostlabs-perennial',
+				'ghostlabs-dynamic-copyright-notice',
 				GHOSTLABS_PERENNIAL_PLUGIN_PATH . 'languages'
 			);
 		}
@@ -78,7 +78,7 @@ final class CopyrightBlock {
 			$parts[] = sprintf(
 				'<span class="%s__rights">%s</span>',
 				esc_attr( self::CSS_BASE ),
-				esc_html__( 'All rights reserved.', 'ghostlabs-perennial' )
+				esc_html__( 'All rights reserved.', 'ghostlabs-dynamic-copyright-notice' )
 			);
 		}
 
@@ -144,7 +144,7 @@ final class CopyrightBlock {
 		if ( '' !== $from && $from !== $currentYear ) {
 			return sprintf(
 				/* translators: 1: start year, 2: current year. The separator is an en dash (U+2013), the convention for ranges — change it if your language spaces or punctuates ranges differently. */
-				_x( '© %1$s – %2$s', 'copyright year range', 'ghostlabs-perennial' ),
+				_x( '© %1$s – %2$s', 'copyright year range', 'ghostlabs-dynamic-copyright-notice' ),
 				$from,
 				$currentYear
 			);
@@ -152,7 +152,7 @@ final class CopyrightBlock {
 
 		return sprintf(
 			/* translators: %s: the current year. */
-			_x( '© %s', 'copyright year', 'ghostlabs-perennial' ),
+			_x( '© %s', 'copyright year', 'ghostlabs-dynamic-copyright-notice' ),
 			$currentYear
 		);
 	}

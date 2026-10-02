@@ -3,7 +3,7 @@
         'name' => 'ghostlabs/perennial',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'f37665d47476ecc2406bf6f53c3e5d12e7ee6cef',
+        'reference' => 'c8d04921066ea6e18707ba86b30e73211d53d2e0',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'ghostlabs/perennial' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'f37665d47476ecc2406bf6f53c3e5d12e7ee6cef',
+            'reference' => 'c8d04921066ea6e18707ba86b30e73211d53d2e0',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

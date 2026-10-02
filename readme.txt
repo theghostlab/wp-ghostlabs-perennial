@@ -96,7 +96,7 @@ nothing else.
 
 **By FTP**
 
-1. Unzip the file and upload the `ghostlabs-perennial` folder to `/wp-content/plugins/`.
+1. Unzip the file and upload the `ghostlabs-dynamic-copyright-notice` folder to `/wp-content/plugins/`.
 2. Activate the plugin from the **Plugins** screen.
 
 = Then add the notice =

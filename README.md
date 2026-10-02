@@ -30,7 +30,7 @@ claim, because this is exactly what a reviewer checks.
 
 | | |
 |---|---|
-| `ghostlabs-perennial.php`, `inc/`, `shared/` | the plugin as it ships |
+| `ghostlabs-dynamic-copyright-notice.php`, `bootstrap.php`, `inc/`, `vendor/` | the plugin as it ships, named for the slug WordPress.org assigned |
 | `build/` | the compiled block assets, as they ship |
 | `src/` | the sources `build/` is compiled from |
 | `package.json`, `pnpm-lock.yaml`, `webpack.config.cjs` | everything needed to reproduce that compile |
